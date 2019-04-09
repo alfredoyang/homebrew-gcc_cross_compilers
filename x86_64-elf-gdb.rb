@@ -9,10 +9,10 @@ class X8664ElfGdb < Formula
   depends_on 'x86_64-elf-gcc'
 
   def install
-    ENV['CC'] = '/usr/local/opt/gcc/bin/gcc-7'
-    ENV['CXX'] = '/usr/local/opt/gcc/bin/g++-7'
-    ENV['CPP'] = '/usr/local/opt/gcc/bin/cpp-7'
-    ENV['LD'] = '/usr/local/opt/gcc/bin/gcc-7'
+    ENV['CC'] = '/usr/local/opt/gcc@7/bin/gcc-7'
+    ENV['CXX'] = '/usr/local/opt/gcc@7/bin/g++-7'
+    ENV['CPP'] = '/usr/local/opt/gcc@7/bin/cpp-7'
+    ENV['LD'] = '/usr/local/opt/gcc@7/bin/gcc-7'
 
     mkdir 'build' do
       system '../configure', '--target=x86_64-pc-linux', "--prefix=#{prefix}"
